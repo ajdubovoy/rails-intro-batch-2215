@@ -11,4 +11,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  root to: "pages#home"
+  # root is just for the homepage
+  get "/about", to: "pages#about"
+  # VERB "/PATH", to: "CONTROLLER#ACTION"
+  get "/contact", to: "pages#contact"
 end

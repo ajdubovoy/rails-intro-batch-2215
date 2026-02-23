@@ -1,0 +1,22 @@
+<h1>Contact Us</h1>
+
+<p>We'd be glad to hear from you.</p>
+
+<form action="/contact" method="get">
+  <label for="member">Who do you want to search for?</label>
+  <input
+  id="member"
+  name="member"
+  value="<%= params[:member] %>"
+  type="text">
+
+  <input type="submit">
+</form>
+
+<p>You searched for: "<%= params[:member] %>"</p>
+
+<ul>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ul>
